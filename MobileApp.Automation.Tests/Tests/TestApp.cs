@@ -1,8 +1,9 @@
 using MobileApp.Automation.Utilities.CommonMethods;
 using OpenQA.Selenium;
-namespace AppiumTest
+
+namespace MobileApp.Automation.Tests.Tests
 {
-    public class Tests : TestBase1
+    public class Tests : TestBase
     {
         
         [Test]

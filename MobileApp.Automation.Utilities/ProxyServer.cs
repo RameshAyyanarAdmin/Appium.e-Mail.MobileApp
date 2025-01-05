@@ -1,9 +1,9 @@
 ﻿using System.Net;
 using System.Net.Sockets;
-using MobileApp.Automation.Utilities;
+using MobileApp.Automation.Tests.Tests;
 using Newtonsoft.Json.Linq;
 
-namespace AppiumTest
+namespace MobileApp.Automation.Utilities
 {
     public class ProxyServer
     {
