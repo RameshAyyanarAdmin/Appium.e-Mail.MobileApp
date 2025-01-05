@@ -2,9 +2,9 @@
 using MobileApp.Automation.Utilities.CommonMethods;
 using MobileApp.Automation.Utilities;
 
-namespace AppiumTest
+namespace MobileApp.Automation.Tests.Tests
 {
-    public class TestBase1
+    public class TestBase
     {
         public static AppiumDriver<AppiumWebElement>? driver { get; set; }
         public static ProxyServer? proxy;

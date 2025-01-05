@@ -4,7 +4,7 @@ using System.Text;
 using System.Xml;
 using OpenQA.Selenium.Appium;
 
-namespace AppiumTest
+namespace MobileApp.Automation.Tests.Tests
 {
     public static class Utils
     {

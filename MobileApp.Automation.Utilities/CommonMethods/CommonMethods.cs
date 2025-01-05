@@ -2,12 +2,12 @@
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.iOS;
-using AppiumTest;
 using System.Drawing;
 using Castle.Core.Internal;
 using HtmlAgilityPack;
 using Newtonsoft.Json;
 using System.Net;
+using MobileApp.Automation.Tests.Tests;
 
 namespace MobileApp.Automation.Utilities.CommonMethods
 {
