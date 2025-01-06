@@ -9,6 +9,8 @@
   <ItemGroup>
     <Folder Include="PageObjects\" />
     <Folder Include="PageFunctions\" />
+    <Folder Include="PageObjects\" />
+    <Folder Include="PageFunctions\" />
   </ItemGroup>
 
   <ItemGroup>
