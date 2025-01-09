@@ -1,5 +1,7 @@
+using MobileApp.Automation.POM.PageObjects;
 using MobileApp.Automation.Utilities.CommonMethods;
 using OpenQA.Selenium;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MobileApp.Automation.Tests.Tests
 {
@@ -7,24 +9,19 @@ namespace MobileApp.Automation.Tests.Tests
     {
         
         [Test]
+        [Category("Andriod"), Author("Ramesh")]
         public void VerifyOutlookEmailLink() {
             try
-            {                
-                Thread.Sleep(5000);
-                IWebElement gotIT_button = CommonMethods.driver.FindElement(By.XPath("//android.widget.TextView[@text='GOT IT']"));             
-                gotIT_button.Click();
-                Thread.Sleep(5000);
-                IWebElement Add_EmailAddress_link = CommonMethods.driver.FindElement(By.XPath("//android.widget.TextView[@text='Add an email address']"));
-                Add_EmailAddress_link.Click();
-                Thread.Sleep(5000);
-                IWebElement Add_Outlook_link = CommonMethods.driver.FindElement(By.XPath("//android.widget.TextView[@text='Outlook, Hotmail, and Live']"));
-                Add_Outlook_link.Click();                
-                Thread.Sleep(5000);
+            {
+                extentTest = extent.CreateTest(TestContext.CurrentContext.Test.Name);
+                CommonMethods.extentTest = extentTest;
+                Page.EmailHomePage.HomePage_AddEmail();
+                Page.EmailHomePage.Access_OutlookEmail();               
             }
             catch (Exception ex)
             {
                 Console.WriteLine("An exception occured: " + ex.Message);
-                throw;
+                Assert.Fail(ex.Message);
             }
         }      
     }

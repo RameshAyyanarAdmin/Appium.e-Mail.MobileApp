@@ -17,6 +17,7 @@ namespace MobileApp.Automation.Utilities
         public const int SleepTimeBeforeSendKeysInMs = 3000;
         public const string KobitonApiUrl = "https://api-prod-blue.kobiton.com";
         public const string AndroidEmailApp = "com.google.android.gm";
+        public static string ExtentReportPath = Directory.GetCurrentDirectory().Split("\\bin\\Debug\\")[0] + "\\Test-Results\\ExtentReport.html";
 
 
         public static string GetBasicAuthString()
