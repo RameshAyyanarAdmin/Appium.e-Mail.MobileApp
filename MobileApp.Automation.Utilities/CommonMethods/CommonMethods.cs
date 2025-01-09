@@ -8,6 +8,10 @@ using HtmlAgilityPack;
 using Newtonsoft.Json;
 using System.Net;
 using MobileApp.Automation.Tests.Tests;
+using OpenQA.Selenium;
+using Microsoft.CodeAnalysis;
+using NUnit.Framework;
+using AventStack.ExtentReports;
 
 namespace MobileApp.Automation.Utilities.CommonMethods
 {
@@ -25,6 +29,50 @@ namespace MobileApp.Automation.Utilities.CommonMethods
         public static string IosXpathRedundantPrefix = "/AppiumAUT";
         public static string NativeContext = "NATIVE_APP";
         private const int SleepAfterAction = 200;
+        public static ExtentTest extentTest { get; set; }
+
+        public static void Click(string elementName, IWebElement element)
+        {
+            try
+            {
+                element.Click();
+                extentTest.Log(Status.Pass, $"Clicked on {elementName}");
+            }
+            catch(Exception ex)
+            {
+                extentTest.Log(Status.Fail, $"Failed to click on {elementName}");
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        public static void sendKeys(string elementName, IWebElement element, String testInput)
+        {
+            try
+            {
+                element.SendKeys(testInput);
+                extentTest.Log(Status.Pass, $"Entered {testInput} in {elementName}");
+            }
+            catch (Exception ex)
+            {
+                extentTest.Log(Status.Fail, $"Failed to enter {testInput} in {elementName}");
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        public static bool IsDisplayed(IWebElement element)
+        {
+            bool isDisplayed = false;
+            try
+            {
+                Thread.Sleep(1000);
+                isDisplayed = element.Displayed;
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+            return isDisplayed;
+        }
 
         public static Device FindOnlineDevice(AppiumOptions capabilities)
         {

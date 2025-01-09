@@ -7,13 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="PageObjects\" />
-    <Folder Include="PageFunctions\" />
-    <Folder Include="PageObjects\" />
-    <Folder Include="PageFunctions\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Appium.WebDriver" Version="4.3.0" />
     <PackageReference Include="coverlet.collector" Version="3.2.0">
       <PrivateAssets>all</PrivateAssets>
@@ -35,6 +28,10 @@
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
     <PackageReference Include="Selenium.WebDriverBackedSelenium" Version="3.141.0" />
     <PackageReference Include="SkiaSharp" Version="2.88.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MobileApp.Automation.Utilities\MobileApp.Automation.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

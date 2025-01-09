@@ -10,15 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Test-Results\**" />
-    <Compile Remove="TestData\**" />
-    <EmbeddedResource Remove="Test-Results\**" />
-    <EmbeddedResource Remove="TestData\**" />
-    <None Remove="Test-Results\**" />
-    <None Remove="TestData\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Appium.WebDriver" Version="4.3.0" />
     <PackageReference Include="coverlet.collector" Version="3.2.0">
       <PrivateAssets>all</PrivateAssets>
@@ -48,10 +39,13 @@
 
   <ItemGroup>
     <Folder Include="BaseSuite\" />
+    <Folder Include="TestData\" />
+    <Folder Include="Test-Results\" />
     <Folder Include="Tests\" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MobileApp.Automation.POM\MobileApp.Automation.POM.csproj" />
     <ProjectReference Include="..\MobileApp.Automation.Utilities\MobileApp.Automation.Utilities.csproj" />
   </ItemGroup>
 
