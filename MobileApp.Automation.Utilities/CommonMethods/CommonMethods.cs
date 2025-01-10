@@ -12,12 +12,12 @@ using OpenQA.Selenium;
 using Microsoft.CodeAnalysis;
 using NUnit.Framework;
 using AventStack.ExtentReports;
+using Castle.Components.DictionaryAdapter;
 
 namespace MobileApp.Automation.Utilities.CommonMethods
 {
     public class CommonMethods
     {
-        public static AppiumDriver<AppiumWebElement>? driver { get; set;}
         public static AppiumOptions? options;
         public static ProxyServer? proxy;
         public static bool isIos;
@@ -29,7 +29,21 @@ namespace MobileApp.Automation.Utilities.CommonMethods
         public static string IosXpathRedundantPrefix = "/AppiumAUT";
         public static string NativeContext = "NATIVE_APP";
         private const int SleepAfterAction = 200;
+
+//DefaultPropertyGetter Setters
+//=====================================================================================================================================
         public static ExtentTest extentTest { get; set; }
+        public static AppiumDriver<AppiumWebElement>? driver { get; set; }
+        public static Dictionary<String, Dictionary<String, Dictionary<String, String>>> sheetCollectionData { get; set; }
+        public static String currentTestCaseName { get; set; }
+        public static String currentClassName { get; set; }
+        //=======================================================================================================================================
+
+
+
+
+
+
 
         public static void Click(string elementName, IWebElement element)
         {

@@ -25,6 +25,7 @@ namespace MobileApp.Automation.Tests.Tests
                 Config.KobitonApiKey, Is.Not.EqualTo("your_kobiton_api_key"),
                 "Please update value for the KobitonApiKey constant first. See more at README.md file."
             );
+                TestData.TestDataInitialize();
                 ExtentSparkReporter = new ExtentSparkReporter(Config.ExtentReportPath);
                 ExtentSparkReporter.Config.Theme = Theme.Dark;
                 ExtentSparkReporter.Config.Encoding = "utf-8";
@@ -58,6 +59,7 @@ namespace MobileApp.Automation.Tests.Tests
         {
             try
             {
+                CommonMethods.currentTestCaseName = TestContext.CurrentContext.Test.MethodName;
                 driver.LaunchApp();
             }
             catch (Exception ex)

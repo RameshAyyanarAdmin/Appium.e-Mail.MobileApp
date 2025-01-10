@@ -10,7 +10,7 @@ namespace MobileApp.Automation.Tests.Tests
         
         [Test]
         [Category("Andriod"), Author("Ramesh")]
-        public void VerifyOutlookEmailLink() {
+        public void VerifyOutlookEmail() {
             try
             {
                 extentTest = extent.CreateTest(TestContext.CurrentContext.Test.Name);
