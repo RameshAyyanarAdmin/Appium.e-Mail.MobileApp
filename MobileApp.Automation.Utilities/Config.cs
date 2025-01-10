@@ -5,7 +5,6 @@ namespace MobileApp.Automation.Utilities
     public class Config
     {
         public enum DeviceSourceEnums { Kobiton, SauceLabs }
-
         public const string KobitonUserName = "Ramesh.sep89";
         public const string KobitonApiKey = "7c554b1b-27a0-4c20-9e4e-479095db50b6";
         public const string AppiumServerUrl = "https://" + KobitonUserName + ":" + KobitonApiKey + "@api-prod-blue.kobiton.com/wd/hub";
@@ -18,7 +17,7 @@ namespace MobileApp.Automation.Utilities
         public const string KobitonApiUrl = "https://api-prod-blue.kobiton.com";
         public const string AndroidEmailApp = "com.google.android.gm";
         public static string ExtentReportPath = Directory.GetCurrentDirectory().Split("\\bin\\Debug\\")[0] + "\\Test-Results\\ExtentReport.html";
-
+        public static string testDataFilePath = Directory.GetCurrentDirectory().Split("\\bin\\Debug\\")[0] + "\\TestData\\testData.xlsx";
 
         public static string GetBasicAuthString()
         {
