@@ -5,8 +5,8 @@ namespace MobileApp.Automation.Utilities
     public class Config
     {
         public enum DeviceSourceEnums { Kobiton, SauceLabs }
-        public const string KobitonUserName = "Ramesh.sep89";
-        public const string KobitonApiKey = "7c554b1b-27a0-4c20-9e4e-479095db50b6";
+        public const string KobitonUserName = "your_kobiton_user_name";
+        public const string KobitonApiKey = "your_kobiton_api_key";
         public const string AppiumServerUrl = "https://" + KobitonUserName + ":" + KobitonApiKey + "@api-prod-blue.kobiton.com/wd/hub";
         public const DeviceSourceEnums DeviceSource = DeviceSourceEnums.Kobiton;
         public const int ImplicitWaitInMs = 30000;
